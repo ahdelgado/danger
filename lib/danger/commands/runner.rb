@@ -70,14 +70,14 @@ module Danger
     end
 
     def run
-      p "Base: ", @base # nil
-      p "Head: ", @head  # nil
-      p "Dangerfile path: ", @dangerfile_path  # 'Dangerfile'
-      p "Danger ID: ", @danger_id  # 'danger'
-      p "New comment: ", @new_comment  # nil
-      p "Fail on errors: ", @fail_on_errors  # false
-      p "Fail if no PR: ", @fail_if_no_pr  # false
-      p "Remove previous comments: ", @remove_previous_comments  # nil
+#       p "Base: ", @base # nil
+#       p "Head: ", @head  # nil
+#       p "Dangerfile path: ", @dangerfile_path  # 'Dangerfile'
+#       p "Danger ID: ", @danger_id  # 'danger'
+#       p "New comment: ", @new_comment  # nil
+#       p "Fail on errors: ", @fail_on_errors  # false
+#       p "Fail if no PR: ", @fail_if_no_pr  # false
+#       p "Remove previous comments: ", @remove_previous_comments  # nil
       Executor.new(ENV).run(
         base: @base,
         head: @head,
