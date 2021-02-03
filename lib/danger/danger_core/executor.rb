@@ -43,6 +43,9 @@ module Danger
     end
 
     def validate!(cork, fail_if_no_pr: false)
+      50.times { p "Cork: ", cork }
+      50.times { p "Fail if no PR: ", fail_if_no_pr }
+      50.times { p "System Environment: ", system_env }
       validate_ci!
       validate_pr!(cork, fail_if_no_pr)
     end
