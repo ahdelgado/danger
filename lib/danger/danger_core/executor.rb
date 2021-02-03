@@ -49,7 +49,7 @@ module Danger
       # false
       p "System Environment: ", system_env
       # {"PATH"=>"/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", "HOSTNAME"=>"152dbc67b154", "RUBY_MAJOR"=>"2.7", "RUBY_VERSION"=>"2.7.0", "RUBY_DOWNLOAD_SHA256"=>"27d350a52a02b53034ca0794efe518667d558f152656c2baaf08f3d0c8b02343", "GEM_HOME"=>"/usr/local/bundle", "BUNDLE_SILENCE_ROOT_WARNING"=>"1", "BUNDLE_APP_CONFIG"=>"/usr/local/bundle", "INSTALL_PATH"=>"/app", "RUBYOPT"=>"-r/usr/local/lib/ruby/2.7.0/bundler/setup -W0", "HOME"=>"/root", "BUNDLER_ORIG_BUNDLE_BIN_PATH"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_BUNDLE_GEMFILE"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_BUNDLER_VERSION"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_GEM_HOME"=>"/usr/local/bundle", "BUNDLER_ORIG_GEM_PATH"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_MANPATH"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_PATH"=>"/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", "BUNDLER_ORIG_RB_USER_INSTALL"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_RUBYLIB"=>"BUNDLER_ENVIRONMENT_PRESERVER_INTENTIONALLY_NIL", "BUNDLER_ORIG_RUBYOPT"=>"-W0", "BUNDLE_BIN_PATH"=>"/usr/local/lib/ruby/gems/2.7.0/gems/bundler-2.1.2/libexec/bundle", "BUNDLE_GEMFILE"=>"/app/Gemfile", "BUNDLER_VERSION"=>"2.1.2", "RUBYLIB"=>"", "MANPATH"=>"/usr/local/bundle/gems/kramdown-2.3.0/man"}
-      validate_ci!
+#       validate_ci!
       validate_pr!(cork, fail_if_no_pr)
     end
 
@@ -59,7 +59,7 @@ module Danger
 
     # Could we find a CI source at all?
     def validate_ci!
-      10.times { p ['EnvironmentManager.local_ci_source', EnvironmentManager.local_ci_source] }
+#       10.times { p ['EnvironmentManager.local_ci_source', EnvironmentManager.local_ci_source] }
 #       unless EnvironmentManager.local_ci_source(system_env)
 #         abort("Could not find the type of CI for Danger to run on.".red)
 #       end
