@@ -7,7 +7,7 @@ module Danger
 
     # Finds a Danger::CI class based on the ENV
     def self.local_ci_source(env)
-      10.times { puts ['CI.available_ci_sources', CI.available_ci_sources] }
+      10.times { p ['CI.available_ci_sources', CI.available_ci_sources] }
       CI.available_ci_sources.find { |ci| ci.validates_as_ci? env }
     end
 
