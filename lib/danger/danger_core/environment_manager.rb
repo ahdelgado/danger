@@ -10,7 +10,8 @@ module Danger
       p ['CI Class', CI.class]
       p ['CI.available_ci_sources', CI.available_ci_sources]
       p ['CI.available_ci_sources class', CI.available_ci_sources.class]
-      CI.available_ci_sources.find { |ci| ci.validates_as_ci? env }
+      # CI.available_ci_sources.find { |ci| ci.validates_as_ci? env }
+      Danger::BitbucketPipelines
     end
 
     # Uses the current Danger::CI subclass, and sees if it is a PR
