@@ -59,6 +59,7 @@ module Danger
 
     # Could we find a CI source at all?
     def validate_ci!
+      10.times { puts ['EnvironmentManager.local_ci_source', EnvironmentManager.local_ci_source] }
       unless EnvironmentManager.local_ci_source(system_env)
         abort("Could not find the type of CI for Danger to run on.".red)
       end
