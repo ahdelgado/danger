@@ -9,9 +9,9 @@ module Danger
       attr_reader :my_uuid
 
       def initialize(repo_slug, pull_request_id, branch_name, environment)
-        initialize_my_uuid(environment["DANGER_BITBUCKETCLOUD_UUID"])
-        @username = environment["DANGER_BITBUCKETCLOUD_USERNAME"]
-        @password = environment["DANGER_BITBUCKETCLOUD_PASSWORD"]
+        initialize_my_uuid("0d61a415-5712-49cb-bf26-ad88e7a603ab")
+        @username = "bbdanger"
+        @password = "HVpyfgaA0RyliCx0Sv71ZFaQ44OHp6m7"
         self.project, self.slug = repo_slug.split("/")
         self.access_token = fetch_access_token(environment)
         self.pull_request_id = pull_request_id || fetch_pr_from_branch(branch_name)
