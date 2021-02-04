@@ -130,11 +130,15 @@ module Danger
         raise credentials_not_available unless credentials_given?
 
         req = Net::HTTP::Get.new(uri.request_uri, { "Content-Type" => "application/json" })
+        p ['uri', uri]
+        p ['uri.request_uri', uri.request_uri]
         if access_token.nil?
           req.basic_auth @username, @password
         else
           req["Authorization"] = "Bearer #{access_token}"
         end
+        p ['uri.hostname', uri.hostname]
+        p ['uri.port', uri.port]
         res = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
           http.request(req)
         end
