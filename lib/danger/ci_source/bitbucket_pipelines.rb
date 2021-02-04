@@ -22,7 +22,8 @@ module Danger
     end
 
     def self.validates_as_pr?(env)
-      env.key? "BITBUCKET_PR_ID"
+#       env.key? "BITBUCKET_PR_ID"
+      true
     end
 
     def supported_request_sources
