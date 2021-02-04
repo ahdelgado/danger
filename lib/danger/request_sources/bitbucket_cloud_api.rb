@@ -14,6 +14,10 @@ module Danger
         @password = "HVpyfgaA0RyliCx0Sv71ZFaQ44OHp6m7"
         self.project, self.slug = repo_slug.split("/")
         self.access_token = fetch_access_token(environment)
+        p ['repo_slug', repo_slug]
+        p ['pull_request_id', pull_request_id]
+        p ['branch_name', branch_name]
+        p ['environment', environment]
         self.pull_request_id = pull_request_id || fetch_pr_from_branch(branch_name)
         self.host = "https://bitbucket.org/"
       end
